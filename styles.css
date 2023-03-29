@@ -208,7 +208,7 @@ li a:hover:not(.active) {
 }
 
 #level {
+  display: block;
+  margin: 130px auto auto auto;
   width: 50%;
-  margin: auto auto auto;
-
 }
