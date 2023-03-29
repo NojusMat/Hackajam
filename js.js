@@ -67,44 +67,63 @@ function mcq(subject, topic) {
     let questionList = []
 
     if(subject == "english") {
-        if (topic == "vowels") {}
-        else if (topic == "adjectives") {}
+        if (topic == "vowels") {
+            let data = english[0].vowels
+            questionList = questionHTMLgenerate(data)}
+        else if (topic == "adjectives") {
+            let data = english[0].adjectives
+            questionList = questionHTMLgenerate(data)}
     }
     else if (subject == "maths") {
-        if (topic == "addition") {}
-        else if (topic == "subtraction") {}
-        else if (topic == "multiplication") {}
+        if (topic == "addition") {
+            let data = maths[0].addition
+            questionList = questionHTMLgenerate(data)}
+        else if (topic == "subtraction") {
+            let data = maths[1].subtraction
+            questionList = questionHTMLgenerate(data)}
+        else if (topic == "multiplication") {
+            let data = maths[2].multiplication
+            questionList = questionHTMLgenerate(data)}
     }
     else if (subject == "geography") {
         if (topic == "continents") {
             let data = geography[0].continents
-            for(i = 0; i < data.length; i++) {
-                let question = {questionText:"",questionOptions:[], answer:""}
-
-                question.questionText = data[i].question
-                question.questionOptions.push(data[i].answer)
-                data[i].incorrects.map(incorrect => question.questionOptions.push(incorrect))
-                
-                question.questionOptions = question.questionOptions.sort((a, b) => 0.5 - Math.random());
-                question.answer = data[i].answer
-                
-
-                let questionHTML = `
-                <div class="questionBox">
-                    <p class="questionText">${question.questionText}</p>
-                    <div class="questionGrid">
-                        <div class="questionGridItem">${question.questionOptions[0]}</div>
-                        <div class="questionGridItem">${question.questionOptions[1]}</div>
-                        <div class="questionGridItem">${question.questionOptions[2]}</div>
-                        <div class="questionGridItem">${question.questionOptions[3]}</div>
-                    </div>
-                </div>`
-                questionList.push(questionHTML)
+            questionList = questionHTMLgenerate(data)
             }
+        else if (topic == "capital_cities") {
+            let data = geography[1].capital_cities
+            questionList = questionHTMLgenerate(data)
         }
-        else if (topic == "capital_cities") {}
     }
 
     document.getElementById("mcqBox").innerHTML = questionList
     
+}
+
+function questionHTMLgenerate(data) {
+    let questionList = []
+    for(i = 0; i < data.length; i++) {
+        let question = {questionText:"",questionOptions:[], answer:""}
+
+        question.questionText = data[i].question
+        question.questionOptions.push(data[i].answer)
+        data[i].incorrects.map(incorrect => question.questionOptions.push(incorrect))
+        
+        question.questionOptions = question.questionOptions.sort((a, b) => 0.5 - Math.random());
+        question.answer = data[i].answer
+        
+
+        let questionHTML = `
+        <div class="questionBox">
+            <p class="questionText">${question.questionText}</p>
+            <div class="questionGrid">
+                <div class="questionGridItem">${question.questionOptions[0]}</div>
+                <div class="questionGridItem">${question.questionOptions[1]}</div>
+                <div class="questionGridItem">${question.questionOptions[2]}</div>
+                <div class="questionGridItem">${question.questionOptions[3]}</div>
+            </div>
+        </div>`
+        questionList.push(questionHTML)
+    }
+    return questionList
 }
