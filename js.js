@@ -112,18 +112,29 @@ function questionHTMLgenerate(data) {
         question.questionOptions = question.questionOptions.sort((a, b) => 0.5 - Math.random());
         question.answer = data[i].answer
         
+        let q1IsCorrect = question.questionOptions[0] == question.answer ? "correct" : "incorrect";
+        let q2IsCorrect = question.questionOptions[1] == question.answer ? "correct" : "incorrect";
+        let q3IsCorrect = question.questionOptions[2] == question.answer ? "correct" : "incorrect";
+        let q4IsCorrect = question.questionOptions[3] == question.answer ? "correct" : "incorrect";
+
+        console.log(q1IsCorrect)
 
         let questionHTML = `
         <div class="questionBox">
             <p class="questionText">${question.questionText}</p>
             <div class="questionGrid">
-                <div class="questionGridItem">${question.questionOptions[0]}</div>
-                <div class="questionGridItem">${question.questionOptions[1]}</div>
-                <div class="questionGridItem">${question.questionOptions[2]}</div>
-                <div class="questionGridItem">${question.questionOptions[3]}</div>
+                <div onclick="(optionSelect('${q1IsCorrect}', event))" class="questionGridItem">${question.questionOptions[0]}</div>
+                <div onclick="(optionSelect('${q2IsCorrect}', event))" class="questionGridItem">${question.questionOptions[1]}</div>
+                <div onclick="(optionSelect('${q3IsCorrect}', event))" class="questionGridItem">${question.questionOptions[2]}</div>
+                <div onclick="(optionSelect('${q4IsCorrect}', event))" class="questionGridItem">${question.questionOptions[3]}</div>
             </div>
         </div>`
         questionList.push(questionHTML)
     }
     return questionList
+}
+
+optionSelect = (isCorrect,e) => {
+    isCorrect == "correct" ? e.target.style.backgroundColor = "#99ff99" : e.target.style.backgroundColor = "#ff9999"
+    
 }
