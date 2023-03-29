@@ -1,5 +1,5 @@
 body {margin:0;
-background-color: #EDF7F6; /* For browsers that do not support gradients */
+background-color: #e4f3f2; /* For browsers that do not support gradients */
 
 font-family: 'Jua', sans-serif;
 }
@@ -15,6 +15,13 @@ margin-top: 5px;
   float: right;
   margin-right:70px;
   outline: white;
+}
+
+.title{
+  width:100%;
+  margin-left:-5px;
+  margin-right:-200px;
+  margin-top: 5px;
 }
 
 ul {
@@ -36,13 +43,41 @@ ul {
 li {
      
   float: left;
+  color:rgba(0,0,0,0);
   
 }
+
+.buttonChoiceMaths{
+  background-color: rgb(211, 154, 154);
+  margin-left:200px;
+  width:70%;
+  border-radius: 30px;
+
+
+}
+
+.buttonChoiceEng{
+  background-color: rgb(154, 185, 211);
+  margin-left:200px;
+  width:70%;
+  border-radius: 30px;
+
+}
+
+.buttonChoiceGeo{
+  background-color: rgb(170, 211, 154);
+  margin-left:200px;
+  width:70%;
+  border-radius: 30px;
+
+}
+
 .buttonChoice{
   
   margin-left:200px;
   width:70%;
   box-shadow: 0 2px 4px 0 rgba(112, 112, 112, 0.2);
+  border-radius: 30px;
 }
 
 li a {
@@ -78,7 +113,7 @@ li a:hover:not(.active) {
 }
 
 .active {
-  background-color: #04AA6D;
+  background-color: #e2e467;
 }
 
 /*The overview's background colour will change based on the subject's accent colour*/
@@ -137,8 +172,10 @@ li a:hover:not(.active) {
   margin: auto;
 }
 
+
+
 .questionBox {
-  border: 5px solid black;
+  border: 5px solid #9b9e9e;
   border-radius: 30px;
   text-align: center;
   width: 60%;
@@ -155,7 +192,7 @@ li a:hover:not(.active) {
 }
 
 .questionGridItem {
-  border: 3px solid black;
+  border: 3px solid #334245;
   border-radius: 30px;
   margin: 0.5%;
 }
@@ -191,8 +228,8 @@ li a:hover:not(.active) {
   border: 3px solid red;
 }
 .green-audio, .visual-green {
-  background-color: greenyellow;
-  border: 3px solid green;
+  background-color: rgb(182, 230, 111);
+  border: 3px solid rgb(52, 146, 52);
 }
 
 .Choice {
@@ -204,11 +241,11 @@ li a:hover:not(.active) {
 }
 
 #subjectsBox {
-  margin-top:130px;
+  margin-top:13px;
 }
 
 #level {
   display: block;
-  margin: 130px auto auto auto;
+  margin: 100px auto auto auto;
   width: 50%;
 }
