@@ -30,3 +30,86 @@ li a:hover:not(.active) {
 .active {
   background-color: #04AA6D;
 }
+
+/*The overview's background colour will change based on the subject's accent colour*/
+.subjectOverview {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  border: 4px solid black;
+  border-radius: 10px;
+  margin: 4% auto auto auto;
+}
+
+.subjectOverviewHeader {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+}
+.subjectName {
+  font-size: 250%;
+  width: 50%;
+  margin: 3%;
+}
+
+.subjectTotalXP {
+  width: 50%;
+  text-align: right;
+  margin: 1% 3% 3% 3%;
+}
+
+.subjectOverviewComments {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  font-size: 120%;
+}
+
+.subjectFeedback, .subjectNextUp {
+  margin: 3%;
+}
+
+
+#levelStatus {
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+  border: 4px solid black;
+  border-radius: 10px;
+  margin-bottom: 2%;
+  margin: auto;
+}
+
+#levelNumber, #levelBar, #totalXP {
+  width: 30%;
+  margin: auto;
+}
+
+.questionBox {
+  border: 5px solid black;
+  border-radius: 30px;
+  text-align: center;
+  width: 60%;
+  margin: 3% auto auto auto;
+  font-size: 150%;
+  padding: 1%;
+}
+
+.questionGrid {
+  display: grid;
+  width: 80%;
+  grid-template-columns: 50% 50%;
+  margin: auto;
+}
+
+.questionGridItem {
+  border: 3px solid black;
+  border-radius: 30px;
+  margin: 0.5%;
+}
+
+.questionGridItem:hover {
+  background-color: white;
+}
