@@ -9,8 +9,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+  <script src="js.js"></script>
+
 </head>
-<body>
+<body onload="mcq('geography','continents')">
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="maths.html">Maths </a></li>
@@ -29,7 +31,13 @@
     <li><a class="buttonChoice" href="geoVisual.html">Visual</a></li>
     
     </div>
-  
+    <audio class="green-audio" controls>
+        <source src="horse.ogg" type="audio/ogg">
+        <source src="horse.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+      </audio>
+    <img id="bobEntity" src="GBob.svg"/>
+    <div id="mcqBox"></div>
     
 </body>
 </html>

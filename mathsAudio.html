@@ -9,8 +9,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="js.js"></script>
 </head>
-<body>
+<body onload="mcq('maths','addition')">
 
 
  
@@ -31,7 +32,16 @@
         <li><a class="buttonChoice" href="mathsVisual.html">Visual</a></li>
         
         </div>
+
+        <audio class="red-audio" controls>
+            <source src="horse.ogg" type="audio/ogg">
+            <source src="horse.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+          </audio>
+        <div id="mcqBox">
+
+        </div>
   
-    
+        <img id="bobEntity" src="RBob.svg"/>
 </body>
 </html>
