@@ -202,3 +202,13 @@ li a:hover:not(.active) {
 #mcqBox {
   margin-top: 200px;
 }
+
+#subjectsBox {
+  margin-top:130px;
+}
+
+#level {
+  width: 50%;
+  margin: auto auto auto;
+
+}
